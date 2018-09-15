@@ -1,3 +1,4 @@
+import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
 
 const backgroundColor = Color.fromARGB(255, 52, 73, 94);
@@ -6,7 +7,10 @@ void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light);
+
     return MaterialApp(
+      color: backgroundColor,
       title: 'I Am Rich',
       home: MyHomePage(),
     );
