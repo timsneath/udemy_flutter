@@ -3,26 +3,10 @@ import 'package:flutter/material.dart';
 
 const backgroundColor = Color.fromARGB(255, 52, 73, 94);
 
-void main() => runApp(MyApp());
+void main() => runApp(RichApp());
 
-class MyApp extends StatelessWidget {
-  Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light);
-
-    return MaterialApp(
-      color: backgroundColor,
-      title: 'I Am Rich',
-      home: MyHomePage(),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  Widget build(BuildContext context) {
+class RichApp extends StatelessWidget {
+  Widget homePage() {
     return Scaffold(
       backgroundColor: backgroundColor,
       body: Center(
@@ -47,6 +31,16 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
+    );
+  }
+
+  Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light);
+
+    return MaterialApp(
+      color: backgroundColor,
+      title: 'I Am Rich',
+      home: homePage(),
     );
   }
 }
