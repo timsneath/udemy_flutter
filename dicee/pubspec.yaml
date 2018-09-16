@@ -1,0 +1,17 @@
+name: dicee
+description: A new Flutter project.
+version: 1.0.0+1
+environment:
+  sdk: '>=2.0.0-dev.68.0 <3.0.0'
+dependencies:
+  flutter:
+    sdk: flutter
+dev_dependencies:
+  flutter_launcher_icons: ^0.6.1
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
+flutter_icons:
+  ios: true
+  image_path: assets/Icon-1024.png
