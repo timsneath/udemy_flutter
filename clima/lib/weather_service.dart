@@ -2,7 +2,7 @@ import 'package:geolocator/geolocator.dart';
 import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
 
-const String WeatherUrl = 'http://api.openweathermap.org/data/2.5/weather';
+const String WeatherUrl = 'http://api.openweathermap.org';
 const String AppID = '4c10e73922ec0d719662dd42a662d4ae';
 
 class WeatherService {
@@ -27,7 +27,7 @@ class WeatherService {
   }
 
   Future<http.Response> getCurrentWeather(Position location) async {
-    final uri = new Uri.http(WeatherUrl, '/', {
+    final uri = new Uri.http(WeatherUrl, '/data/2.5/weather', {
       "lat": location.latitude.toString(),
       "lon": location.longitude.toString()
     });
