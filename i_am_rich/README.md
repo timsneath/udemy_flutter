@@ -1,8 +1,12 @@
-# i_am_rich
+# I Am Rich
 
-A new Flutter project.
+Spoof of the $999 app
 
 ## Getting Started
 
-For help getting started with Flutter, view our online
+Built with Flutter. For help getting started with Flutter, view our online
 [documentation](https://flutter.io/).
+
+## Limitations
+
+- None
