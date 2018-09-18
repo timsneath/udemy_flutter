@@ -99,16 +99,12 @@ class _MainPageState extends State<MainPage> {
               RaisedButton(
                 child: Text('True'),
                 color: Colors.green,
-                onPressed: () {
-                  answerQuestion(true);
-                },
+                onPressed: () => answerQuestion(true),
               ),
               RaisedButton(
                 child: Text('False'),
                 color: Colors.red,
-                onPressed: () {
-                  answerQuestion(false);
-                },
+                onPressed: () => answerQuestion(false),
               ),
             ],
           ),
