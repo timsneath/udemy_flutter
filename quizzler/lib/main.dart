@@ -50,19 +50,22 @@ class _MainPageState extends State<MainPage> {
             FlatButton(
               child: Text('Restart Game'),
               onPressed: () {
-                resetGame();
                 Navigator.pop(context); // quit dialog
               },
             )
           ],
         );
       },
-    );
+    ).then((_) {
+      resetGame();
+    });
   }
 
   answerQuestion(bool answer) {
     if (answer == Questions[currentQuestion].correctAnswer) {
-      correctlyAnswered++;
+      setState(() {
+        correctlyAnswered++;
+      });
     }
 
     if (currentQuestion >= Questions.length - 1) {
@@ -134,7 +137,7 @@ class _MainPageState extends State<MainPage> {
       return Container(
         alignment: Alignment.bottomCenter,
         child: LinearProgressIndicator(
-          value: currentQuestion + 1 / Questions.length,
+          value: (currentQuestion + 1) / Questions.length,
         ),
       );
     }
