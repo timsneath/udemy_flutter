@@ -1,5 +1,4 @@
 import 'dart:math';
-import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(DiceeApp());
@@ -10,10 +9,13 @@ const buttonTextStyle = TextStyle(
 
 class DiceeApp extends StatelessWidget {
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light);
-
     return MaterialApp(
       title: 'Dicee',
+      theme: ThemeData(
+        brightness: Brightness.dark,
+        primaryColor: Colors.green,
+        accentColor: Colors.white,
+      ),
       home: MainPage(),
     );
   }
@@ -67,7 +69,6 @@ class _MainPageState extends State<MainPage> {
       return RaisedButton(
         padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 40.0),
         color: burntOrange,
-        textColor: Colors.white,
         child: Text(
           'Roll',
           style: buttonTextStyle,
