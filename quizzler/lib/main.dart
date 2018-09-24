@@ -5,7 +5,7 @@ const blueColor = Color.fromARGB(255, 49, 130, 217);
 const questionTextStyle = TextStyle(
   fontFamily: 'Helvetica Neue',
   fontSize: 25.0,
-  fontWeight: FontWeight.w200,
+  fontWeight: FontWeight.w800,
 );
 
 void main() => runApp(QuizzlerApp());

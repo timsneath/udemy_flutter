@@ -9,4 +9,4 @@ Built with Flutter. For help getting started with Flutter, view our online
 
 ## Limitations
 
-None. Unlike the Xcode version, this doesn't stop one sound to start the next (cool!)
+None. Unlike the original Xcode version, this doesn't stop one sound to start the next (cool!)

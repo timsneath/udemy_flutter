@@ -25,6 +25,8 @@ class _MainPageState extends State<MainPage> {
   @override
   void initState() {
     super.initState();
+    
+    // precache the sounds
     player.loadAll([
       'note1.wav',
       'note2.wav',
